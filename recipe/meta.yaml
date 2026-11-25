@@ -1,13 +1,13 @@
 {% set name = "py-multihash" %}
-{% set version = "3.0.0" %}
+{% set version = "4.0.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/py_multihash-{{ version }}.tar.gz
-  sha256: 2e848941de5ef0533ca26b81940e2ffcf7b4322a3f803e8c97f4f0eca8767aa7
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/py_multihash-{{ version }}.tar.gz
+  sha256: 82d5302d7af1c4034809f50e44fd21c90aa5cc5e9af4fd9c2063a0cf56dc36e9
 
 build:
   noarch: python
@@ -23,9 +23,6 @@ requirements:
   run:
     - python >={{ python_min }}
     - varint >=1.0.2,<2.0
-    - six >=1.10.0,<2.0
-    - morphys >=1.0,<2.0
-    - base58 >=1.0.2,<3.0
     - blake3 >=0.3.0,<2.0
     - mmh3 >=3.0.0,<6.0
 
